@@ -1,0 +1,86 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font: {
+        size: 16px;
+        family: $primary-font;
+    }
+    @include font-smoothing;
+}
+h1 {
+  font-family: $primary-font;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-size: 2.3em;
+  line-height: 1.4;
+  font-weight: $font-weight-light;
+  &.smaller {
+    font-size: 1.7em;
+  }
+}
+h2 {
+  //font-size: 42px;
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+h3 {
+  font-size: 20px;
+  font-weight: $font-weight-semi-bold;
+  color: $white;
+  margin-bottom: .5em;
+}
+p {
+    margin: 1em auto 0;
+    line-height: 1.6;
+}
+.body-text{
+  background: $color-7;
+  color: #25373C;
+  font-size: 18px;
+  text-align: center;
+  p{
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    color: #45636B;
+  }
+}
+@media (max-width: $ML){
+    .body-text p{
+        width: 100%;
+    }
+}
+
+label {
+  font-weight: $font-weight-light;
+  margin: 0 .4em 0 0;
+}
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@include placeholder {
+    color: transparent;
+}
+
+.about-me{
+  p{
+    width: 100%;
+    display: inline-block;
+    //padding: 0px 5% 0 3%;
+    padding: 0;
+  }
+}
+
+
+
+
+

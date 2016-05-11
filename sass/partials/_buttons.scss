@@ -1,0 +1,42 @@
+// button {
+//   font-family: $primary-font;
+//   display: inline-block;
+//   padding: .4em .8em;
+//   background: $color_storm_dust_approx;
+//   border: 0;
+//   color: $color_alto_approx;
+//   font-size: 16px;
+//   font-weight: 300;
+//   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+//   border-radius: 4px;
+//   cursor: pointer;
+//   &.active {
+//     background: $color_fountain_blue_approx;
+//   }
+//   &:focus {
+//     outline: 0 none;
+//   }
+//   + label {
+//     margin-left: 1em;
+//   }
+// }
+
+.button {
+  display: inline-block;
+  border: none;
+  padding: .5em .9em;
+  font-weight: $font-weight-normal;
+  cursor: $cursor-for-links;
+  text-decoration: none;
+  outline: 0;
+  background: $color-8;
+  color: $color-9;
+}
+.button.button-medium {
+  padding: .75em 1.2em;
+}
+.button.button-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

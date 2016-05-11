@@ -1,0 +1,316 @@
+// ########   #######  ######## ########  #######  ##     ##    ##     ##    ###    ########   ######   #### ##    ##  ######
+// ##     ## ##     ##    ##       ##    ##     ## ###   ###    ###   ###   ## ##   ##     ## ##    ##   ##  ###   ## ##    ##
+// ##     ## ##     ##    ##       ##    ##     ## #### ####    #### ####  ##   ##  ##     ## ##         ##  ####  ## ##
+// ########  ##     ##    ##       ##    ##     ## ## ### ##    ## ### ## ##     ## ########  ##   ####  ##  ## ## ##  ######
+// ##     ## ##     ##    ##       ##    ##     ## ##     ##    ##     ## ######### ##   ##   ##    ##   ##  ##  ####       ##
+// ##     ## ##     ##    ##       ##    ##     ## ##     ##    ##     ## ##     ## ##    ##  ##    ##   ##  ##   ### ##    ##
+// ########   #######     ##       ##     #######  ##     ##    ##     ## ##     ## ##     ##  ######   #### ##    ##  ######
+//
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+.margin-bottom-0-important {
+  margin-bottom: 0 !important;
+}
+.li-margin-bottom-dot-five li,
+.margin-bottom-half,
+.margin-bottom-half-1 {
+  margin-bottom: .5em;
+}
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+.margin-bottom-12 {
+  margin-bottom: 1em;
+}
+.margin-bottom-1-4 {
+  margin-bottom: 1.4em;
+}
+.margin-bottom-1-5 {
+  margin-bottom: 1.5em;
+}
+.margin-bottom-3-half {
+  margin-bottom: 3.5em;
+}
+.margin-bottom-4-half {
+  margin-bottom: 4.5em;
+}
+.margin-bottom-8{
+  margin-bottom: 8px;
+}
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+.margin-bottom-15{
+  margin-bottom: 15px;
+}
+.margin-bottom-18{
+  margin-bottom: 18px;
+}
+.margin-bottom-24 {
+  margin-bottom: 24px;
+}
+.margin-bottom-36 {
+  margin-bottom: 36px;
+}
+.margin-bottom-48 {
+  margin-bottom: 48px;
+}
+.margin-bottom-60 {
+  margin-bottom: 60px;
+}
+
+@mixin generate-bottom-margins-important {
+  @for $i from 0 through $num_of_bottom_margin_classes - 1 {
+     .margin-bottom-#{$i}-important {
+        margin-bottom: (#{$i}em) !important;
+     }
+     .margin-bottom-#{$i} {
+        margin-bottom: (#{$i}em);
+     }
+  }
+  @for $i from 0 through $num_of_bottom_margin_classes - 1 {
+    @media(max-width: $tablet) {
+      .mobile-margin-bottom-#{$i} {
+        margin-bottom: (#{$i}em);
+      }
+      .mobile-margin-bottom-#{$i}-important {
+        margin-bottom: (#{$i}em) !important;
+      }
+    }
+  }
+}
+@include generate-bottom-margins-important();
+
+@media (max-width: $large-tablet) {
+  .large-tablet-margin-bottom-0 {
+    margin-bottom: 0;
+  }
+}
+
+// ########  #######  ########     ##     ##    ###    ########   ######   #### ##    ##  ######
+//    ##    ##     ## ##     ##    ###   ###   ## ##   ##     ## ##    ##   ##  ###   ## ##    ##
+//    ##    ##     ## ##     ##    #### ####  ##   ##  ##     ## ##         ##  ####  ## ##
+//    ##    ##     ## ########     ## ### ## ##     ## ########  ##   ####  ##  ## ## ##  ######
+//    ##    ##     ## ##           ##     ## ######### ##   ##   ##    ##   ##  ##  ####       ##
+//    ##    ##     ## ##           ##     ## ##     ## ##    ##  ##    ##   ##  ##   ### ##    ##
+//    ##     #######  ##           ##     ## ##     ## ##     ##  ######   #### ##    ##  ######
+.margin-top-1-1 {
+  margin-top: 1.1em;
+}
+.margin-top-1-2 {
+  margin-top: 1.2em;
+}
+.margin-top-1-3 {
+  margin-top: 1.3em;
+}
+.margin-top-1-4 {
+  margin-top: 1.4em;
+}
+.margin-top-1-5 {
+  margin-top: 1.5em;
+}
+.margin-top-24 {
+  margin-top: 24px;
+}
+
+@mixin generate-top-margins {
+  @for $i from 0 through $num_of_top_margin_classes - 1 {
+     .margin-top-#{$i} {
+        margin-top: (#{$i}em);
+     }
+  }
+}
+@include generate-top-margins();
+
+@mixin generate-top-margins-important {
+  @for $i from 0 through $num_of_top_margin_classes - 1 {
+     .margin-top-#{$i}-important {
+        margin-top: (#{$i}em) !important;
+     }
+  }
+}
+@include generate-top-margins-important();
+
+@media (max-width: $phone) {
+  .phone-margin-top-0 {
+    margin-top: 0;
+  }
+  .phone-margin-top-1 {
+    margin-top: 1em;
+  }
+  .phone-margin-top-1-3 {
+    margin-top: 1.3em;
+  }
+  .phone-margin-top-1-4 {
+    margin-top: 1.4em;
+  }
+  .phone-margin-bottom-0 {
+    margin-bottom: 0;
+  }
+  .phone-margin-bottom-1 {
+    margin-bottom: 1em;
+  }
+  .phone-margin-bottom-1-3 {
+    margin-bottom: 1.3em;
+  }
+  .phone-margin-bottom-1-4 {
+    margin-bottom: 1.4em;
+  }
+}
+
+// ##    ## ########  ######      ###    ######## #### ##     ## ########    ##     ##    ###    ########   ######   #### ##    ##  ######
+// ###   ## ##       ##    ##    ## ##      ##     ##  ##     ## ##          ###   ###   ## ##   ##     ## ##    ##   ##  ###   ## ##    ##
+// ####  ## ##       ##         ##   ##     ##     ##  ##     ## ##          #### ####  ##   ##  ##     ## ##         ##  ####  ## ##
+// ## ## ## ######   ##   #### ##     ##    ##     ##  ##     ## ######      ## ### ## ##     ## ########  ##   ####  ##  ## ## ##  ######
+// ##  #### ##       ##    ##  #########    ##     ##   ##   ##  ##          ##     ## ######### ##   ##   ##    ##   ##  ##  ####       ##
+// ##   ### ##       ##    ##  ##     ##    ##     ##    ## ##   ##          ##     ## ##     ## ##    ##  ##    ##   ##  ##   ### ##    ##
+// ##    ## ########  ######   ##     ##    ##    ####    ###    ########    ##     ## ##     ## ##     ##  ######   #### ##    ##  ######
+// GENERATE NEGATIVE MARGIN CLASSES
+@mixin generate-negative-margins {
+  @for $i from 1 through $num_of_nevative_margin_classes - 1 {
+     .negative-margin-top-#{$i} {
+        margin-top: -(#{$i}em);
+     }
+     .important-negative-margin-top-#{$i} {
+        margin-top: -(#{$i}em) !important;
+     }
+     .negative-margin-bottom-#{$i} {
+        margin-bottom: -(#{$i}em);
+     }
+  }
+}
+@include generate-negative-margins();
+.margin-top--1,
+.margin-top-minus-1 {
+  margin-top: -1em !important;
+}
+
+
+//  ######  #### ########  ########    ##     ##    ###    ########   ######   #### ##    ##
+// ##    ##  ##  ##     ## ##          ###   ###   ## ##   ##     ## ##    ##   ##  ###   ##
+// ##        ##  ##     ## ##          #### ####  ##   ##  ##     ## ##         ##  ####  ##
+//  ######   ##  ##     ## ######      ## ### ## ##     ## ########  ##   ####  ##  ## ## ##
+//       ##  ##  ##     ## ##          ##     ## ######### ##   ##   ##    ##   ##  ##  ####
+// ##    ##  ##  ##     ## ##          ##     ## ##     ## ##    ##  ##    ##   ##  ##   ###
+//  ######  #### ########  ########    ##     ## ##     ## ##     ##  ######   #### ##    ##
+// GENERATE SIDE MARGIN CLASSES
+@mixin generate-side-margins {
+  @for $i from 1 through $num_of_side_margin_classes - 1 {
+     .margin-left-#{$i} {
+        margin-left: #{$i}em;
+     }
+     .margin-left-#{$i}-important {
+        margin-left: #{$i}em !important;
+     }
+     .margin-right-#{$i} {
+        margin-right: #{$i}em;
+     }
+     .margin-sides-#{$i} {
+        margin-right: #{$i}em;
+        margin-left: #{$i}em;
+     }
+  }
+}
+@include generate-side-margins();
+
+.margin-left-25px {
+  margin-left: 25px;
+}
+
+@media(min-width: $M) {
+  .float-left-tablet-larger {
+    float: left;
+  }
+  .float-right-tablet-larger {
+    float: right;
+  }
+  .margin-right-1-tablet-larger {
+    margin-right: 1em;
+  }
+}
+
+.v-product-page ul:not(.thumb-links-video).no-margin-left > li,
+.margin-left-0,
+.no-margin-left {
+  margin-left: 0;
+  li {
+    margin-left: 0;
+  }
+}
+
+li.li-left-margin,
+li.li-margin-left,
+.li-left-margin li,
+.li-margin-left li{
+  margin-left: 1.2em;
+}
+
+//  ######  ########     ###     ######  ######## ########   ######
+// ##    ## ##     ##   ## ##   ##    ## ##       ##     ## ##    ##
+// ##       ##     ##  ##   ##  ##       ##       ##     ## ##
+//  ######  ########  ##     ## ##       ######   ########   ######
+//       ## ##        ######### ##       ##       ##   ##         ##
+// ##    ## ##        ##     ## ##    ## ##       ##    ##  ##    ##
+//  ######  ##        ##     ##  ######  ######## ##     ##  ######
+// GENERATE SPACER CLASSES
+@mixin generate-spacer-classes {
+  @for $i from 1 through $num_of_space_classes - 1 {
+     .spacer-#{$i} {
+        height: ($i)+em;
+        background: $theme_color0;
+        display:block;
+        width: 100%;
+        float: left;
+        clear:both;
+        @include clearfix();
+     }
+  }
+}
+@include generate-spacer-classes();
+
+// ########     ###    ########  ########  #### ##    ##  ######
+// ##     ##   ## ##   ##     ## ##     ##  ##  ###   ## ##    ##
+// ##     ##  ##   ##  ##     ## ##     ##  ##  ####  ## ##
+// ########  ##     ## ##     ## ##     ##  ##  ## ## ## ##   ####
+// ##        ######### ##     ## ##     ##  ##  ##  #### ##    ##
+// ##        ##     ## ##     ## ##     ##  ##  ##   ### ##    ##
+// ##        ##     ## ########  ########  #### ##    ##  ######
+//
+.padded {
+  padding: 1em;
+  overflow: hidden;
+}
+.padding-0 { padding: 0 !important; }
+
+// GENERATE PADDING CLASSES
+@mixin generate-padding-classes {
+  @for $i from 1 through $num_of_padding_classes - 1 {
+     .padding-top-#{$i} {
+        padding-top: #{$i}em;
+     }
+     .padding-top-#{$i}-important {
+        padding-top: #{$i}em !important;
+     }
+     .padding-bottom-#{$i} {
+        padding-bottom: #{$i}em;
+     }
+     .padding-bottom-#{$i}-important {
+        padding-bottom: #{$i}em !important;
+     }
+  }
+}
+@include generate-padding-classes();
+
+@mixin generate-padding-classes-important {
+  @for $i from 1 through $num_of_padding_classes - 1 {
+     .padding-top-important-#{$i} {
+        padding-top: #{$i}em !important;
+     }
+     .padding-bottom-important-#{$i} {
+        padding-bottom: #{$i}em !important;
+     }
+  }
+}
+@include generate-padding-classes-important();

@@ -1,0 +1,35 @@
+.fixed-scroll-down {
+  display: block;
+  width: 4em;
+  height: 4em;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  left: -.3em;
+  position: relative;
+  margin: 0 auto;
+}
+.fixed-scroll-down:before,
+.fixed-scroll-down:after {
+  content: '';
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  margin-left: -.8em;
+  margin-top: .3em;
+  border-top: 0.2em solid #FFFFFF;
+  border-right: 0.2em solid #FFFFFF;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  position: absolute;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+.fixed-scroll-down:after {
+  margin-top: 1.2em;
+}
+

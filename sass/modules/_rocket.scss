@@ -1,0 +1,102 @@
+#banner {
+  background: $color-1;
+  position: relative;
+  height: 460px;
+  margin:0;
+  padding: 5px 0;
+  color: #f2f2f2;
+  overflow:hidden;
+  cursor:pointer;
+  h3 {
+    margin-top: 100px;
+    margin-right: 100px;
+    font-size: 5em;
+    font-weight: 100;
+    line-height: 1;
+    width: 100%;
+    float: right;
+    text-align: right;
+    max-width: 300px;
+
+    span {
+      font-weight:400;
+    }
+  }
+}
+
+#items {
+  display:block;
+  background:black;
+}
+.panels{
+  @include listfix;
+  width:100%;
+
+  li {
+    display:block;
+    position:relative;
+    float:left;
+    width:31%;
+    top: -50px;
+    height:250px;
+    margin-right:3%;
+    background:$red;
+    @include css-gradient($red, darken($red, 7%));
+    opacity: .8;
+    overflow:hidden;
+    @include prefix( transition, all .3s linear);
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+      height: 150px;
+      margin-right:0;
+      margin-bottom: 1em;
+
+      i {
+        top: -50px!important;
+      }
+    }
+
+    &:nth-child(2){
+      background: $blue;
+      @include css-gradient($blue, darken($blue, 7%));
+    }
+
+    &:nth-child(3){
+      background: $purple  ;
+      @include css-gradient($purple, darken($purple, 7%));
+    }
+
+    &:nth-child(3n){
+      margin-right:0;
+    }
+
+    i {
+      position: absolute;
+      top: 10%;
+      right: -10px;
+      font-size:220px;
+    }
+  }
+}
+
+.shippy {
+  display:block;
+  position: absolute;
+  background: url(/img/rocket.png) no-repeat 0 0;
+  z-index:3
+}
+.cloud {
+  display:block;
+  position:absolute;
+  background: white;
+  border-radius:40px;
+  z-index:2;
+}
+.star {
+  display:block;
+  position:absolute;
+  background:white;
+  border-radius: 2;
+  z-index:1;
+}

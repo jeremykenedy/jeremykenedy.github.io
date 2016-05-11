@@ -1,0 +1,50 @@
+/* --------------------------------
+
+no-js
+
+-------------------------------- */
+
+.no-js .nav-trigger {
+    display: none;
+}
+
+.no-js .vertical-nav {
+    position: static;
+    height: auto;
+    width: 100%;
+    max-width: none;
+    background-color: rgba($color-3, .8);
+    border-radius: 0;
+    @include transform(scale(1));
+
+    &::before {
+        display: none;
+    }
+
+    ul {
+        @include clearfix;
+    }
+
+    li {
+        display: inline-block;
+        float: left;
+    }
+
+    a {
+        padding: 0 1em;
+        margin: 1.5em 1em;
+        color: $color-2;
+
+        &.active {
+            color: $color-4;
+        }
+    }
+
+    a::after, a::before {
+        display: none;
+    }
+
+    .label {
+        @include transform(translateX(0));
+    }
+}

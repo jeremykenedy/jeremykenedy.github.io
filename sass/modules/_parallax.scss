@@ -1,0 +1,62 @@
+.skrollr-desktop {
+  body {
+      height:100% !important;
+  }
+}
+#skrollr-body {
+    height:100%;
+    position:relative;
+    overflow: hidden;
+}
+
+/*  Styles for this example */
+.parallax-image {
+  &.skrollable-between {
+    display:block;
+  }
+}
+.no-skrollr {
+  .parallax-image-wrapper {
+    display:none !important;
+  }
+}
+.parallax-image-wrapper {
+  position:fixed;
+  left:0;
+  width:100%;
+  overflow:hidden;
+  height:80vh;
+  top:-80vh;
+}
+.parallax-image {
+  display:none;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  height:100vh;
+  top:0;
+  &.skrollable-between {
+      display:block;
+  }
+}
+.no-skrollr {
+  .parallax-image-wrapper {
+    display:none !important;
+  }
+}
+.gap {
+  background:transparent center no-repeat;
+  background-size:cover;
+  height:80vh;
+}
+.skrollr {
+  .gap {
+    background:transparent !important;
+  }
+}
+
+/*  End of scrollr styles   */

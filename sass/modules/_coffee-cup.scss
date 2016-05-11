@@ -1,0 +1,53 @@
+// =========================================================================================================================
+//
+//  ######   #######  ######## ######## ######## ########     ######  ##     ## ########      ######  ##     ##  ######
+// ##    ## ##     ## ##       ##       ##       ##          ##    ## ##     ## ##     ##    ##    ## ##     ## ##    ##
+// ##       ##     ## ##       ##       ##       ##          ##       ##     ## ##     ##    ##       ##     ## ##
+// ##       ##     ## ######   ######   ######   ######      ##       ##     ## ########      ######  ##     ## ##   ####
+// ##       ##     ## ##       ##       ##       ##          ##       ##     ## ##                 ##  ##   ##  ##    ##
+// ##    ## ##     ## ##       ##       ##       ##          ##    ## ##     ## ##           ##    ##   ## ##   ##    ##
+//  ######   #######  ##       ##       ######## ########     ######   #######  ##            ######     ###     ######
+//
+// =========================================================================================================================
+//
+svg {
+    &.coffee {
+      display: none;
+      width: 100%;
+      max-width: 100px;
+      opacity: 0;
+    }
+}
+
+@include keyframes(smoke){
+  0% {
+    opacity: 0;
+    @include transform(translateX(0%) translateY(0px));
+  }
+  25% {
+    opacity: .2;
+     @include transform(translateX(50%) translateY(-25px));
+  }
+  50% {
+    opacity: .3;
+     @include transform(translateX(-50%) translateY(-50px));
+  }
+  75% {
+    opacity: .2;
+     @include transform(translateX(75%) translateY(-75px));
+  }
+  100% {
+    opacity: 0;
+     @include transform(translateX(-75%) translateY(-100px));
+  }
+}
+
+.smoke-1 {
+  @include animation(smoke $cofee_steam_trans_speed_1+s linear infinite);
+}
+.smoke-2 {
+  @include animation(smoke $cofee_steam_trans_speed_2+s linear infinite);
+}
+.smoke-3 {
+  @include animation(smoke $cofee_steam_trans_speed_3+s linear infinite);
+}

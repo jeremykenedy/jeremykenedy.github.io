@@ -1,0 +1,95 @@
+//colors
+$color_mine_shaft_approx: 		#333;
+$color_gallery_approx: 			$color-9;
+$white: 						$color-7;
+$color_storm_dust_approx: 		$color-8;
+$color_alto_approx: 			#ddd;
+$color_fountain_blue_approx: 	#68b8c4;
+$color_blue_chill_approx: 		#03899c;
+$color_apple_approx:  			limegreen;
+$yellow:  						yellow;
+
+
+.controls {
+	padding: 2%;
+	//background: $color_mine_shaft_approx;
+	color: $color_gallery_approx;
+}
+
+.container {
+	padding: 2% 0 0;
+	text-align: justify;
+	font-size: 0.1px;
+	//background: $color_fountain_blue_approx;
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+	.mix {
+		display: inline-block;
+		width: 100%;
+		text-align: left;
+		//background: $color_blue_chill_approx;
+		margin-bottom: 2%;
+		display: none;
+		img {
+			width: 100%;
+			@include vendorize(user-drag, none);
+		}
+		// &.category-1 {
+		// 	border-top: 2px solid $color_apple_approx;
+		// }
+		// &.category-2 {
+		// 	border-top: 2px solid $yellow;
+		// }
+		// &:after {
+		// 	content: attr(data-myorder);
+		// 	color: $white;
+		// 	font-size: 16px;
+		// 	display: inline-block;
+		// 	vertical-align: top;
+		// 	padding: 4% 6%;
+		// 	font-weight: 400;
+		// }
+		&:before {
+			content: '';
+			display: inline-block;
+			//padding-top: 60%;
+		}
+	}
+	.gap {
+		display: inline-block;
+		width: 100%;
+	}
+}
+@media all and(min-width: $S) {
+	.container {
+		.mix {
+			width: 49%;
+		}
+		.gap {
+			width: 49%;
+		}
+	}
+}
+@media all and(min-width: $M) {
+	.container {
+		.mix {
+			width: 32%;
+		}
+		.gap {
+			width: 32%;
+		}
+	}
+}
+@media all and(min-width: $L) {
+	.container {
+		.mix {
+			width: 23.5%;
+		}
+		.gap {
+			width: 23.5%;
+		}
+	}
+}

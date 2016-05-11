@@ -1,0 +1,76 @@
+.morning {
+    #section1.page-section {
+        background: $intro-morning-bg-color url($intro-bg-morning) $intro-background-params;
+        background-size: $intro-background-size;
+        svg {
+            &.coffee {
+              display: inline-block;
+              opacity: 1;
+            }
+        }
+        h1 {
+            color: $intro-morning-h1-color;
+        }
+    }
+}
+.noon {
+    #section1.page-section {
+        background: $intro-noon-bg-color url($intro-bg-noon) $intro-background-params;
+        background-size: $intro-background-size;
+        h1 {
+            color: $intro-noon-h1-color;
+        }
+    }
+}
+.afternoon {
+    #section1.page-section {
+        background: $intro-afternoon-bg-color url($intro-bg-afternoon) $intro-background-params;
+        background-size: $intro-background-size;
+        h1 {
+            color: $intro-afternoon-h1-color;
+        }
+    }
+}
+.evening {
+    #section1.page-section {
+        background: $intro-evening-bg-color url($intro-bg-evening) $intro-background-params;
+        background-size: $intro-background-size;
+        h1 {
+            color: $intro-evening-h1-color;
+        }
+    }
+}
+.night {
+    #section1.page-section {
+        background: $intro-night-bg-color url($intro-bg-night) $intro-background-params;
+        background-size: $intro-background-size;
+        h1 {
+            color: $intro-night-h1-color;
+        }
+        #yoda {
+            display: inline-block;
+        }
+    }
+}
+.stars {
+    #section1.page-section {
+        z-index: 0;
+        background-image:
+            url(../img/backgrounds/hori.png),
+            url($intro-bg-stars);
+        background-repeat: repeat-x,repeat-x repeat-y;
+        transform:translate3D(0em, 0em, 0);
+        animation: stars 21s ease;
+        transform-style: preserve-3d;
+    }
+}
+
+#section1 {
+    &.page-section {
+        h1 {
+            b {
+                //text-transform: lowercase;
+            }
+        }
+    }
+}

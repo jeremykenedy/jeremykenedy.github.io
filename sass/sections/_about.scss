@@ -1,0 +1,51 @@
+.about-me{
+  padding: 1em 0;
+  text-align: center;
+  color: #25373C;
+  // min-height: 120vh;
+  div{
+    text-align: center;
+    display: inline-block;
+    width: 32%;
+    margin: 0;
+    img{
+      @include vendorize(border-radius, 50%);
+      width: 80%;
+    }
+  }
+  a {
+    &.attribution{
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      width: 280px;
+      margin: 50px auto 10px;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: $M){
+  .about-me {
+    div{
+        width: 45%;
+        margin: 20px 0;
+    }
+  }
+}
+
+@media(min-width: $MS) {
+  .about-me {
+    div {
+      width: 25%;
+      margin: 30px 10px;
+      display: inline-block;
+      img{
+        width: 80%;
+      }
+    }
+    p {
+      max-width: $L;
+    }
+  }
+}

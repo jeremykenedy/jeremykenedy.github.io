@@ -1,0 +1,65 @@
+/* --------------------------------  Primary Base style  -------------------------------- */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+* {
+    @include box-sizing();
+}
+body {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: $color-2;
+    background-color: $color-1;
+}
+a {
+    color: $color-4;
+    text-decoration: none;
+}
+
+/* -------------------------------- Content Sections - basic styles -------------------------------- */
+/* REPLACE WITH TEXT IMAGE */
+.replace-image {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    color: transparent;
+}
+/* VERTICALLY ALIGN SECTIONS CONTENTS */
+.page-section {
+    display: table;
+    height: 100vh;
+    width: 100%;
+    padding: 1em 1.5em;
+    background: $color-1;
+    @media(min-width: $MS) {
+        padding: 1em 2.5em;
+    }
+    @media(min-width: $M) {
+        padding: 1em 4em 1em 3em;
+    }
+    &:nth-of-type(odd) {
+        background-color: lighten($color-1, 20%);
+    }
+    > div {
+        /* VERTICALLY ALIGN <div> INSIDE <section> */
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+    h1, h2 {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    h2 {
+        b {
+            color: tint($color-1, 15%);
+        }
+    }
+    &.content {
+        max-width: 960px
+    }
+}

@@ -1,0 +1,48 @@
+// GENREATE BOURBON NEAT GRID
+@mixin neat-grid-classes {
+  .row {
+   @include outer-container;
+    @media(min-width: $S) {
+       @for $i from 1 through $number-of-grid-classes - 1 {
+        .span-#{$i} {
+          @include span-columns($i);
+        }
+      }
+    }
+    @media(min-width: $MS) {
+       @for $i from 1 through $number-of-grid-classes - 1 {
+        .span-ms-#{$i} {
+          @include span-columns($i);
+        }
+      }
+    }
+    @media(min-width: $M) {
+       @for $i from 1 through $number-of-grid-classes - 1 {
+        .span-m-#{$i} {
+          @include span-columns($i);
+        }
+      }
+    }
+    @media(min-width: $ML) {
+       @for $i from 1 through $number-of-grid-classes - 1 {
+        .span-ml-#{$i} {
+          @include span-columns($i);
+        }
+      }
+    }
+    @media(min-width: $L) {
+       @for $i from 1 through $number-of-grid-classes - 1 {
+        .span-l-#{$i} {
+          @include span-columns($i);
+        }
+      }
+    }
+  }
+}
+@include neat-grid-classes;
+
+// LIGHT GRID FOR CONTAINER <- it works with the .cd-container class inside app.scss
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}

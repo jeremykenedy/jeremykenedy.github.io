@@ -1,0 +1,45 @@
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+@media(min-width: $M) {
+  .float-left-tablet-larger {
+    float: left;
+  }
+  .float-right-tablet-larger {
+    float: right;
+  }
+}
+
+.background-fixed {
+	background-attachment: fixed !important;
+}
+
+.skewed {
+	background: rgba(0,0,139,.3);
+	padding: 1px 4px;
+	color: $color-7;
+	border-radius: 2px;
+	margin: 0 -2px;
+	transform: scaleY(5);
+	-webkit-transform: skew(20deg);
+	transform: skew(7deg);
+	display: inline-block;
+	font-style: italic;
+}
+
+// GENREATE TEXT TRANSFORM CLASSES
+$text-transforms: lowercase uppercase capitalize;
+@mixin text-transform-classes {
+  @each $text-transform in $text-transforms {
+    .#{$text-transform} {
+      text-transform: #{$text-transform};
+    }
+  }
+}
+@include text-transform-classes;
