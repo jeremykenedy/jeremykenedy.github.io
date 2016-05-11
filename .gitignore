@@ -35,8 +35,7 @@ composer.lock
 build/
 sass/build/
 uploads/
-vendor
-vendor/*
+/vendor/*
 node_modules
 Homestead.yaml
 Homestead.json
