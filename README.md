@@ -1,6 +1,6 @@
-# jeremykenedy.com 8.0 [![License](http://jeremykenedy.com/license-gpl3.svg)]()
+# jeremykenedy.com 8.0 aka [jeremykenedy.github.io](jeremykenedy.github.io) [![License](http://jeremykenedy.com/license-gpl3.svg)]()
 
-This is the private repository for jeremykenedy.com, version 8.0
+This is the repository for [jeremykenedy.github.io](jeremykenedy.github.io), version 8.0
 
 | jeremykenedy.com details |
 | :------------ |
