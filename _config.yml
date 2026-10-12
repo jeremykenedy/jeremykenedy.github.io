@@ -1,0 +1,8 @@
+title: Jeremy Kenedy
+description: Director of Engineering. Mirror of github.com/jeremykenedy.
+url: https://jeremykenedy.github.io
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude: [scripts, README.md, LICENSE]
